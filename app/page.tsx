@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import StreakCard from "@/components/StreakCard";
 import StudyButton from "@/components/StudyButton";
 import StreakProgress from "@/components/StreakProgress";
-import MotivationMessage from "@/components/MotivationMessage";
-import StudyHeatmap from "@/components/StudyHeatmap";
-import CursorEmojiTrail from "@/components/CursorEmojiTrail";
+//import MotivationMessage from "@/components/MotivationMessage";
+//import StudyHeatmap from "@/components/StudyHeatmap";
+//import CursorEmojiTrail from "@/components/CursorEmojiTrail";
 import Link from "next/link";
 
 export default function Home() {
@@ -40,9 +40,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-gray-200 px-6 py-10 gap-6">
 
-      {/* Cursor Emoji Effect */}
-      <CursorEmojiTrail />
-
+     
       {/* Header */}
       <div className="text-center">
         <h1 className="text-3xl font-bold">
@@ -56,14 +54,12 @@ export default function Home() {
       {/* Stats Cards */}
       <StreakCard {...data} />
 
-      {/* Motivation Message */}
-      <MotivationMessage streak={data.streak} />
+      
 
       {/* Weekly Progress */}
       <StreakProgress streak={data.streak} />
 
-      {/* Heatmap */}
-      <StudyHeatmap dates={history} />
+      
 
       {/* Study Button */}
       <StudyButton refresh={loadData} />
